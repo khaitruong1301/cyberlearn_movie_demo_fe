@@ -142,9 +142,11 @@ class MovieDetail extends Component {
     }
 
     renderChiTietLichChieu = (theater, date) => {
+        // console.log(this.props.lichChieuPhim,'ds')
         return this.props.lichChieuPhim.map((lc, i) => {
+            // console.log('lc',lc)
             if (lc.MaHeThongRap === theater.MaHeThongRap) {
-                if (this.checkLichChieu(lc, date)) {
+                // if (this.checkLichChieu(lc, date)) {
                     return (
                         <div key={i} className="showtimes__item">
                             <div className="theater__cumrap d-flex align-items-center">
@@ -167,6 +169,7 @@ class MovieDetail extends Component {
                                 <div >
                                     {
                                         lc.ChiTietLichChieu.map((chiTiet, index) => {
+                                            // console.log('object',lc.ChiTietLichChieu)
                                             let thoiGianChieu = moment(new Date(chiTiet.NgayChieuGioChieu)).format("DD.MM.YYYY");
                                             let thoiGianView = new Date(chiTiet.NgayChieuGioChieu);
                                             var now = moment(date).format("DD.MM.YYYY"); //todays date
@@ -178,18 +181,18 @@ class MovieDetail extends Component {
                                             let timeLC = moment(new Date(chiTiet.NgayChieuGioChieu)).format("HH:mm");
                                             // console.log('now', now, "thoiGianChieu", thoiGianChieu);
                                             
-                                            if (duration === 0) {
+                                            // if (duration === 0) {
                                                 // console.log("timeLC", timeLC, 'timeCurrent', timeCurrent);   
-                                                return <button key={index} className="btn mr-2" disabled={parseTime(timeLC).isBefore(parseTime(timeCurrent))} onClick={() => this.handleBookingPage(chiTiet.MaLichChieu)
+                                                return <button key={index} className="btn mr-2 mt-2" disabled={parseTime(timeLC).isBefore(parseTime(timeCurrent))} onClick={() => this.handleBookingPage(chiTiet.MaLichChieu)
                                                 }>{thoiGianView.toLocaleTimeString()}</button>
-                                            }
+                                            // }
                                         })
                                     }
                                 </div>
                             </div>
                         </div>
                     )
-                }
+                // }
             }
         })
     }

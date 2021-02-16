@@ -12,7 +12,7 @@ export const sendMailConfirmBooking = (danhSachGheDaDat, thongTinPhim, maThanhTo
     })
     setTimeout(() => {
         const templateParams = {
-            to_mail: 'vantrantrucphuong@gmail.com',
+            to_mail: 'khaitruong1301@gmail.com',
             maThanhToan: maThanhToan,
             tenPhim: thongTinPhim.TenPhim,
             ngayChieu: thongTinPhim.NgayChieu,
@@ -48,7 +48,7 @@ export const sendMailConfirmCancel = (objectVeHuy, mucHoanTien) => {
     <tbody>
     </tr>` + stringTemplate + `</tbody></table>`;
     const templateParams = {
-        to_mail: 'vantrantrucphuong@gmail.com',
+        to_mail: 'khaitruong1301@gmail.com',
         objectVeHuy: html,
         mucHoanTien: mucHoanTien
     }
