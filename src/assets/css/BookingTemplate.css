@@ -1,0 +1,115 @@
+.ghe {
+    background-color: rgb(189, 182, 182);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.gheNote {
+    background-color: rgb(189, 182, 182);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.gheDoi {
+    width: 58px;
+}
+
+.gheVip {
+    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+}
+
+.gheDaDat {
+    background-color: #e7eaec;
+    cursor: no-drop !important;
+    position: relative;
+}
+
+.gheDaDat::after {
+    font-family: FontAwesome;
+    content: "\f00d";
+    color: #ec7532;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gheDangDat {
+    background: linear-gradient(90deg, rgba(69, 115, 32, 1) 0%, rgba(66, 181, 45, 1) 59%, rgba(103, 242, 63, 1) 100%);
+    cursor: pointer;
+}
+
+.diffUserChoosing {
+    position: relative;
+    background: linear-gradient(to right, #5f2c82, #49a09d);
+    cursor: no-drop !important;
+}
+
+.diffUserChoosing::after {
+    font-family: FontAwesome;
+    content: "\f21b";
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tenHang {
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 20px;
+}
+
+.booking__layout .ant-modal-footer button+button {
+    margin-bottom: 0;
+    margin-left: 8px;
+    background-color: #F39547!important;
+}
+
+.content__gheDat {
+    width: 60%;
+    height: 100px;
+}
+
+.spinner {
+    width: 100%;
+    padding-top: 150px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.typeseat {
+    float: left;
+    color: wheat;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+#somePrefix td.ant-table-fixed-columns-in-body.ant-table-column-has-actions.ant-table-column-has-sorters.ant-table-row-cell-break-word {
+    height: 212px;
+}
+
+#somePrefix .ant-table-middle .ant-table-scroll {
+    height: 240px;
+}
+
+.veDangChon {
+    background-color: #49a09d;
+}

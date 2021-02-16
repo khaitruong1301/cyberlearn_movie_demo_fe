@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Internal Server Error</title>
+        <style>
+            body {
+    font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+    font-size: .813em;
+    color: #222;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+    /*font-family: 'Segoe UI',Tahoma,Arial,Helvetica,sans-serif;*/
+    font-weight: 100;
+}
+
+h1 {
+    color: #44525e;
+    margin: 15px 0 15px 0;
+}
+
+h2 {
+    margin: 10px 5px 0 0;
+}
+
+h3 {
+    color: #363636;
+    margin: 5px 5px 0 0;
+}
+
+code {
+    font-family: Consolas, "Courier New", courier, monospace;
+}
+
+body .titleerror {
+    padding: 3px 3px 6px 3px;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+body .location {
+    margin: 3px 0 10px 30px;
+}
+
+#header {
+    font-size: 18px;
+    padding: 15px 0;
+    border-top: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    margin-bottom: 0;
+}
+
+    #header li {
+        display: inline;
+        margin: 5px;
+        padding: 5px;
+        color: #a0a0a0;
+        cursor: pointer;
+    }
+
+    #header .selected {
+        background: #44c5f2;
+        color: #fff;
+    }
+
+#stackpage ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    /*border-bottom: 1px #ddd solid;*/
+}
+
+#stackpage .details {
+    font-size: 1.2em;
+    padding: 3px;
+    color: #000;
+}
+
+#stackpage .stackerror {
+    padding: 5px;
+    border-bottom: 1px #ddd solid;
+}
+
+
+#stackpage .frame {
+    padding: 0;
+    margin: 0 0 0 30px;
+}
+
+    #stackpage .frame h3 {
+        padding: 2px;
+        margin: 0;
+    }
+
+#stackpage .source {
+    padding: 0 0 0 30px;
+}
+
+    #stackpage .source ol li {
+        font-family: Consolas, "Courier New", courier, monospace;
+        white-space: pre;
+        background-color: #fbfbfb;
+    }
+
+#stackpage .frame .source .highlight li span {
+    color: #FF0000;
+}
+
+#stackpage .source ol.collapsible li {
+    color: #888;
+}
+
+    #stackpage .source ol.collapsible li span {
+        color: #606060;
+    }
+
+.page table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0 20px;
+}
+
+.page th {
+    vertical-align: bottom;
+    padding: 10px 5px 5px 5px;
+    font-weight: 400;
+    color: #a0a0a0;
+    text-align: left;
+}
+
+.page td {
+    padding: 3px 10px;
+}
+
+.page th, .page td {
+    border-right: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    border-left: 1px transparent solid;
+    border-top: 1px transparent solid;
+    box-sizing: border-box;
+}
+
+    .page th:last-child, .page td:last-child {
+        border-right: 1px transparent solid;
+    }
+
+.page .length {
+    text-align: right;
+}
+
+a {
+    color: #1ba1e2;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #13709e;
+        text-decoration: underline;
+    }
+
+.showRawException {
+    cursor: pointer;
+    color: #44c5f2;
+    background-color: transparent;
+    font-size: 1.2em;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    padding: 0;
+}
+
+.rawExceptionStackTrace {
+    font-size: 1.2em;
+}
+
+.rawExceptionBlock {
+    border-top: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+}
+
+.showRawExceptionContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.expandCollapseButton {
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    width: 16px;
+    font-size: 10px;
+    position: absolute;
+    left: 10px;
+    background-color: #eee;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>An unhandled exception occurred while processing the request.</h1>
+            <div class="titleerror">SqlException: Unclosed quotation mark after the character string &#x27; TrucPhuong&#x27;.<br />
+Incorrect syntax near &#x27; TrucPhuong&#x27;.</div>
+                <p class="location">System.Data.SqlClient.SqlConnection.OnError(SqlException exception, bool breakConnection, Action&lt;Action&gt; wrapCloseInAction)</p>
+        <ul id="header">
+            <li id="stack" tabindex="1" class="selected">
+                Stack
+            </li>
+            <li id="query" tabindex="2">
+                Query
+            </li>
+            <li id="cookies" tabindex="3">
+                Cookies
+            </li>
+            <li id="headers" tabindex="4">
+                Headers
+            </li>
+        </ul>
+
+        <div id="stackpage" class="page">
+            <ul>
+                                    <li>
+                        <h2 class="stackerror">SqlException: Unclosed quotation mark after the character string &#x27; TrucPhuong&#x27;.&#xD;&#xA;Incorrect syntax near &#x27; TrucPhuong&#x27;.</h2>
+                        <ul>
+                            <li class="frame" id="frame1">
+                                    <h3>System.Data.SqlClient.SqlConnection.OnError(SqlException exception, bool breakConnection, Action&lt;Action&gt; wrapCloseInAction)</h3>
+
+                            </li>
+                            <li class="frame" id="frame2">
+                                    <h3>System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, bool callerHasConnectionLock, bool asyncClose)</h3>
+
+                            </li>
+                            <li class="frame" id="frame3">
+                                    <h3>System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, out bool dataReady)</h3>
+
+                            </li>
+                            <li class="frame" id="frame4">
+                                    <h3>System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()</h3>
+
+                            </li>
+                            <li class="frame" id="frame5">
+                                    <h3>System.Data.SqlClient.SqlDataReader.get_MetaData()</h3>
+
+                            </li>
+                            <li class="frame" id="frame6">
+                                    <h3>System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, string resetOptionsString)</h3>
+
+                            </li>
+                            <li class="frame" id="frame7">
+                                    <h3>System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, bool returnStream, bool async, int timeout, out Task task, bool asyncWrite, SqlDataReader ds)</h3>
+
+                            </li>
+                            <li class="frame" id="frame8">
+                                    <h3>System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)</h3>
+
+                            </li>
+                            <li class="frame" id="frame9">
+                                    <h3>System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)</h3>
+
+                            </li>
+                            <li class="frame" id="frame10">
+                                    <h3>Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, bool wasClosed, CommandBehavior behavior) in <code title="C:\projects\dapper\Dapper\SqlMapper.cs">SqlMapper.cs</code></h3>
+
+                            </li>
+                            <li class="frame" id="frame11">
+                                    <h3>Dapper.SqlMapper.QueryRowImpl&lt;T&gt;(IDbConnection cnn, Row row, ref CommandDefinition command, Type effectiveType) in <code title="C:\projects\dapper\Dapper\SqlMapper.cs">SqlMapper.cs</code></h3>
+
+                            </li>
+                            <li class="frame" id="frame12">
+                                    <h3>Dapper.SqlMapper.QuerySingleOrDefault&lt;T&gt;(IDbConnection cnn, string sql, object param, IDbTransaction transaction, Nullable&lt;int&gt; commandTimeout, Nullable&lt;CommandType&gt; commandType) in <code title="C:\projects\dapper\Dapper\SqlMapper.cs">SqlMapper.cs</code></h3>
+
+                            </li>
+                            <li class="frame" id="frame13">
+                                    <h3>BookingTicketRestAPICoreDapper_Data.Repositories.QuanLyThanhVienRespository.LayThongTinTaiKhoan(string taiKhoan) in <code title="D:\0 GRADUATION PROJECT\BookingTicketRestAPICoreDapper\BookingTicketRestAPICoreDapper_Data\Repositories\QuanLyThanhVienRepository.cs">QuanLyThanhVienRepository.cs</code></h3>
+
+                                    <button class="expandCollapseButton" data-frameId="frame13">+</button>
+                                    <div class="source">
+                                            <ol start="251" class="collapsible">
+                                                    <li><span>                {</span></li>
+                                                    <li><span>                    // I wish to return an error response how can i do that?</span></li>
+                                                    <li><span>                    var response = await thongBaoLoi.thongBaoLoi(ThongBaoLoi.Loi400, &quot;T&#xE0;i kho&#x1EA3;n kh&#xF4;ng h&#x1EE3;p l&#x1EC7;!&quot;);</span></li>
+                                                    <li><span>                    return response;</span></li>
+                                                    <li><span>                }</span></li>
+                                                    <li><span></span></li>
+                                            </ol>
+
+                                        <ol start="257" class="highlight">
+                                                <li><span>                IEnumerable&lt;Ve&gt; lstDatVe = connection.QuerySingleOrDefault(&quot;SELECT * FROM dbo.VE WHERE TaiKhoan = &#x27; &quot; &#x2B; taiKhoan, commandType: CommandType.Text);</span></li>
+                                        </ol>
+
+                                            <ol start='258' class="collapsible">
+                                                    <li><span>                List&lt;ThongTinDatVe&gt; lstThongTinDatVe = new List&lt;ThongTinDatVe&gt;();</span></li>
+                                                    <li><span>                if (lstDatVe.Count() != 0)</span></li>
+                                                    <li><span>                {</span></li>
+                                                    <li><span>                    ThongTinDatVe thongTinDatVe = new ThongTinDatVe();</span></li>
+                                                    <li><span></span></li>
+                                                    <li><span>                    foreach (var item in lstDatVe)</span></li>
+                                            </ol>
+                                    </div>
+                            </li>
+                            <li class="frame" id="frame14">
+                                    <h3>BookingTicketRestAPICoreDapper.Controllers.QuanLyThanhVienController.LayThongTinTaiKhoan(string taiKhoan) in <code title="D:\0 GRADUATION PROJECT\BookingTicketRestAPICoreDapper\BookingTicketRestAPICoreDapper\Controllers\QuanLyThanhVienController.cs">QuanLyThanhVienController.cs</code></h3>
+
+                                    <button class="expandCollapseButton" data-frameId="frame14">+</button>
+                                    <div class="source">
+                                            <ol start="63" class="collapsible">
+                                                    <li><span>            return Ok(thanhVienDKVM);</span></li>
+                                                    <li><span>        }</span></li>
+                                                    <li><span></span></li>
+                                                    <li><span>        [HttpGet(&quot;LayThongTinTaiKhoan&quot;)]</span></li>
+                                                    <li><span>        public async Task&lt;IActionResult&gt; LayThongTinTaiKhoan(string taiKhoan)</span></li>
+                                                    <li><span>        {</span></li>
+                                            </ol>
+
+                                        <ol start="69" class="highlight">
+                                                <li><span>            var result = await _quanLyThanhVienRepository.LayThongTinTaiKhoan(taiKhoan);</span></li>
+                                        </ol>
+
+                                            <ol start='70' class="collapsible">
+                                                    <li><span>            return Ok(result);</span></li>
+                                                    <li><span>        }</span></li>
+                                                    <li><span></span></li>
+                                                    <li><span>        // PUT: api/QuanLyThanhVien</span></li>
+                                                    <li><span>        [HttpPut(&quot;CapNhatThongTinThanhVien&quot;)]</span></li>
+                                                    <li><span>        public async Task&lt;IActionResult&gt; CapNhatThongTinThanhVien(ThanhVienViewModel thongTinCapNhat)</span></li>
+                                            </ol>
+                                    </div>
+                            </li>
+                            <li class="frame" id="frame15">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor&#x2B;TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, object controller, object[] arguments)</h3>
+
+                            </li>
+                            <li class="frame" id="frame16">
+                                    <h3>System.Threading.Tasks.ValueTask&lt;TResult&gt;.get_Result()</h3>
+
+                            </li>
+                            <li class="frame" id="frame17">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()</h3>
+
+                            </li>
+                            <li class="frame" id="frame18">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()</h3>
+
+                            </li>
+                            <li class="frame" id="frame19">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)</h3>
+
+                            </li>
+                            <li class="frame" id="frame20">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(ref State next, ref Scope scope, ref object state, ref bool isCompleted)</h3>
+
+                            </li>
+                            <li class="frame" id="frame21">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()</h3>
+
+                            </li>
+                            <li class="frame" id="frame22">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()</h3>
+
+                            </li>
+                            <li class="frame" id="frame23">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)</h3>
+
+                            </li>
+                            <li class="frame" id="frame24">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(ref State next, ref Scope scope, ref object state, ref bool isCompleted)</h3>
+
+                            </li>
+                            <li class="frame" id="frame25">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()</h3>
+
+                            </li>
+                            <li class="frame" id="frame26">
+                                    <h3>Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()</h3>
+
+                            </li>
+                            <li class="frame" id="frame27">
+                                    <h3>Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)</h3>
+
+                            </li>
+                            <li class="frame" id="frame28">
+                                    <h3>Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)</h3>
+
+                            </li>
+                            <li class="frame" id="frame29">
+                                    <h3>Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)</h3>
+
+                            </li>
+                            <li class="frame" id="frame30">
+                                    <h3>Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)</h3>
+
+                            </li>
+                            <li class="frame" id="frame31">
+                                    <h3>Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)</h3>
+
+                            </li>
+                            <li class="frame" id="frame32">
+                                    <h3>Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)</h3>
+
+                            </li>
+                            <li class="frame" id="frame33">
+                                    <h3>Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)</h3>
+
+                            </li>
+                            <li class="frame" id="frame34">
+                                    <h3>Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)</h3>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <br/>
+                        <div class="rawExceptionBlock">
+                            <div class="showRawExceptionContainer">
+                                <button class="showRawException" data-exceptionDetailId="exceptionDetail1">Show raw exception details</button>
+                            </div>
+                            <div id="exceptionDetail1" class="rawExceptionDetails">
+                                <pre class="rawExceptionStackTrace">System.Data.SqlClient.SqlException (0x80131904): Unclosed quotation mark after the character string &#x27; TrucPhuong&#x27;.&#xD;&#xA;Incorrect syntax near &#x27; TrucPhuong&#x27;.&#xD;&#xA;   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)&#xD;&#xA;   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()&#xD;&#xA;   at System.Data.SqlClient.SqlDataReader.get_MetaData()&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)&#xD;&#xA;   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)&#xD;&#xA;   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1051&#xD;&#xA;   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition&amp; command, Type effectiveType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1177&#xD;&#xA;   at Dapper.SqlMapper.QuerySingleOrDefault[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 801&#xD;&#xA;   at BookingTicketRestAPICoreDapper_Data.Repositories.QuanLyThanhVienRespository.LayThongTinTaiKhoan(String taiKhoan) in D:\0 GRADUATION PROJECT\BookingTicketRestAPICoreDapper\BookingTicketRestAPICoreDapper_Data\Repositories\QuanLyThanhVienRepository.cs:line 257&#xD;&#xA;   at BookingTicketRestAPICoreDapper.Controllers.QuanLyThanhVienController.LayThongTinTaiKhoan(String taiKhoan) in D:\0 GRADUATION PROJECT\BookingTicketRestAPICoreDapper\BookingTicketRestAPICoreDapper\Controllers\QuanLyThanhVienController.cs:line 69&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)&#xD;&#xA;   at System.Threading.Tasks.ValueTask`1.get_Result()&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()&#xD;&#xA;   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)&#xD;&#xA;   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)&#xD;&#xA;   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)&#xD;&#xA;   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)&#xD;&#xA;   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)&#xD;&#xA;   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)&#xD;&#xA;   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)&#xD;&#xA;   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)&#xD;&#xA;ClientConnectionId:2f3d38f6-6c61-45d3-82e7-c5764d4ac878&#xD;&#xA;Error Number:105,State:1,Class:15</pre>
+                            </div>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+
+        <div id="querypage" class="page">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr>
+                                    <td>taiKhoan</td>
+                                    <td>TrucPhuong</td>
+                                </tr>
+                    </tbody>
+                </table>
+        </div>
+
+        <div id="cookiespage" class="page">
+                <p>No cookie data.</p>
+        </div>
+        <div id="headerspage" class="page">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr>
+                                    <td>Accept</td>
+                                    <td>application/json</td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Encoding</td>
+                                    <td>gzip, deflate, br</td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7</td>
+                                </tr>
+                                <tr>
+                                    <td>Connection</td>
+                                    <td>Keep-Alive</td>
+                                </tr>
+                                <tr>
+                                    <td>Host</td>
+                                    <td>localhost:44350</td>
+                                </tr>
+                                <tr>
+                                    <td>MS-ASPNETCORE-TOKEN</td>
+                                    <td>6ff59bce-5084-48a7-baea-a80521fd4da1</td>
+                                </tr>
+                                <tr>
+                                    <td>Referer</td>
+                                    <td>https://localhost:44350/swagger/index.html</td>
+                                </tr>
+                                <tr>
+                                    <td>sec-fetch-mode</td>
+                                    <td>cors</td>
+                                </tr>
+                                <tr>
+                                    <td>sec-fetch-site</td>
+                                    <td>same-origin</td>
+                                </tr>
+                                <tr>
+                                    <td>User-Agent</td>
+                                    <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36</td>
+                                </tr>
+                                <tr>
+                                    <td>X-Original-For</td>
+                                    <td>127.0.0.1:58525</td>
+                                </tr>
+                                <tr>
+                                    <td>X-Original-Proto</td>
+                                    <td>http</td>
+                                </tr>
+                    </tbody>
+                </table>
+        </div>
+        <script>
+            //<!--
+            (function (window, undefined) {
+    "use strict";
+
+    function ns(selector, element) {
+        return new NodeCollection(selector, element);
+    }
+
+    function NodeCollection(selector, element) {
+        this.items = [];
+        element = element || window.document;
+
+        var nodeList;
+
+        if (typeof (selector) === "string") {
+            nodeList = element.querySelectorAll(selector);
+            for (var i = 0, l = nodeList.length; i < l; i++) {
+                this.items.push(nodeList.item(i));
+            }
+        }
+    }
+
+    NodeCollection.prototype = {
+        each: function (callback) {
+            for (var i = 0, l = this.items.length; i < l; i++) {
+                callback(this.items[i], i);
+            }
+            return this;
+        },
+
+        children: function (selector) {
+            var children = [];
+
+            this.each(function (el) {
+                children = children.concat(ns(selector, el).items);
+            });
+
+            return ns(children);
+        },
+
+        hide: function () {
+            this.each(function (el) {
+                el.style.display = "none";
+            });
+
+            return this;
+        },
+
+        toggle: function () {
+            this.each(function (el) {
+                el.style.display = el.style.display === "none" ? "" : "none";
+            });
+
+            return this;
+        },
+
+        show: function () {
+            this.each(function (el) {
+                el.style.display = "";
+            });
+
+            return this;
+        },
+
+        addClass: function (className) {
+            this.each(function (el) {
+                var existingClassName = el.className,
+                    classNames;
+                if (!existingClassName) {
+                    el.className = className;
+                } else {
+                    classNames = existingClassName.split(" ");
+                    if (classNames.indexOf(className) < 0) {
+                        el.className = existingClassName + " " + className;
+                    }
+                }
+            });
+
+            return this;
+        },
+
+        removeClass: function (className) {
+            this.each(function (el) {
+                var existingClassName = el.className,
+                    classNames, index;
+                if (existingClassName === className) {
+                    el.className = "";
+                } else if (existingClassName) {
+                    classNames = existingClassName.split(" ");
+                    index = classNames.indexOf(className);
+                    if (index > 0) {
+                        classNames.splice(index, 1);
+                        el.className = classNames.join(" ");
+                    }
+                }
+            });
+
+            return this;
+        },
+
+        attr: function (name) {
+            if (this.items.length === 0) {
+                return null;
+            }
+
+            return this.items[0].getAttribute(name);
+        },
+
+        on: function (eventName, handler) {
+            this.each(function (el, idx) {
+                var callback = function (e) {
+                    e = e || window.event;
+                    if (!e.which && e.keyCode) {
+                        e.which = e.keyCode; // Normalize IE8 key events
+                    }
+                    handler.apply(el, [e]);
+                };
+
+                if (el.addEventListener) { // DOM Events
+                    el.addEventListener(eventName, callback, false);
+                } else if (el.attachEvent) { // IE8 events
+                    el.attachEvent("on" + eventName, callback);
+                } else {
+                    el["on" + type] = callback;
+                }
+            });
+
+            return this;
+        },
+
+        click: function (handler) {
+            return this.on("click", handler);
+        },
+
+        keypress: function (handler) {
+            return this.on("keypress", handler);
+        }
+    };
+
+    function frame(el) {
+        ns(".source .collapsible", el).toggle();
+    }
+
+    function expandCollapseButton(el) {
+        var frameId = el.getAttribute("data-frameId");
+        frame(document.getElementById(frameId));
+        if (el.innerText === "+") {
+            el.innerText = "-";
+        }
+        else {
+            el.innerText = "+";
+        }
+    }
+
+    function tab(el) {
+        var unselected = ns("#header .selected").removeClass("selected").attr("id");
+        var selected = ns("#" + el.id).addClass("selected").attr("id");
+
+        ns("#" + unselected + "page").hide();
+        ns("#" + selected + "page").show();
+    }
+
+    ns(".rawExceptionDetails").hide();
+    ns(".collapsible").hide();
+    ns(".page").hide();
+    ns("#stackpage").show();
+
+    ns(".expandCollapseButton")
+        .click(function () {
+            expandCollapseButton(this);
+        })
+        .keypress(function (e) {
+            if (e.which === 13) {
+                expandCollapseButton(this);
+            }
+        });
+
+    ns("#header li")
+        .click(function () {
+            tab(this);
+        })
+        .keypress(function (e) {
+            if (e.which === 13) {
+                tab(this);
+            }
+        });
+
+    ns(".showRawException")
+        .click(function () {
+            var exceptionDetailId = this.getAttribute("data-exceptionDetailId");
+            ns("#" + exceptionDetailId).toggle();
+        });
+})(window);
+            //-->
+        </script>
+    </body>
+</html>

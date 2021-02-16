@@ -1,0 +1,94 @@
+.logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.span__title__icon,
+.button__title__icon {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs,
+.bc,
+.content {
+    display: flex;
+    font-size: 16px;
+}
+
+.bc {
+    margin: 20px 0;
+}
+
+.card__DSGhe {
+    width: 100%!important;
+}
+
+.ghe__admin {
+    color: black!important;
+}
+
+.lc__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border__bt {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.tenHang__admin {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+
+/* .ant-table-tbody>tr>td {
+    padding: 10px 5px;
+} */
+
+.expend__cumRap .ant-table table {
+    border-spacing: unset;
+}
+
+
+/* Rạp manage */
+
+.ant-table-title {
+    position: relative;
+    top: 1px;
+    border-radius: unset;
+    text-transform: uppercase;
+    background: orange;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+thead.ant-table-thead {
+    text-transform: uppercase;
+}
+
+.ant-card-head-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.ant-card-head {
+    background-color: orange;
+}

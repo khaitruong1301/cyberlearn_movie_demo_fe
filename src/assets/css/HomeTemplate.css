@@ -1,0 +1,326 @@
+.homepage {}
+
+#modalDangKy .ant-form-item {
+    margin-bottom: 0;
+}
+
+.top-search {
+    height: 42px;
+}
+
+.top-search .has-error .ant-form-explain {
+    margin-top: 5px;
+    margin-left: 13px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+/* .animation__text {
+    animation: jello 2s infinite;
+    transform-origin: center
+} */
+
+.top-search .ant-select-selection {
+    width: 220px;
+    border: unset;
+    border-right: 1.5px solid white;
+    border-radius: unset;
+    background-color: unset;
+}
+
+.top-search .ant-select-selection:focus,
+.top-search Button {
+    outline: unset!important;
+    -webkit-box-shadow: unset;
+}
+
+.top-search Button:hover {
+    background: unset;
+}
+
+.top-search .ant-btn:focus {
+    background-color: unset;
+}
+
+.top-search .ant-select-selection__placeholder,
+.top-search .ant-select-selection-selected-value {
+    color: #111618;
+    font-size: 17px;
+}
+
+.top-search .ant-select-selection-selected-value {
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.top-search Button {
+    margin-left: 55px;
+}
+
+.left {
+    left: 25px;
+}
+
+.right {
+    right: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 25px;
+}
+
+#gradient {
+    background: #999955;
+    background-image: linear-gradient(#DAB046 20%, #D73B25 20%, #D73B25 40%, #C71B25 40%, #C71B25 60%, #961A39 60%, #961A39 80%, #601035 80%);
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    height: 150px;
+}
+
+#gradient:after {
+    content: "";
+    position: absolute;
+    background: #E9E2D0;
+    left: 50%;
+    margin-top: -67.5px;
+    margin-left: -270px;
+    padding-left: 20px;
+    border-radius: 5px;
+    width: 520px;
+    height: 275px;
+    z-index: -1;
+}
+
+#card {
+    position: absolute;
+    width: 450px;
+    height: 225px;
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 50%;
+    top: 67.5px;
+    margin-left: -250px;
+    background: #E9E2D0;
+    box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+    z-index: 5;
+}
+
+#card img {
+    width: 150px;
+    float: left;
+    border-radius: 5px;
+    margin-right: 20px;
+    /*-webkit-filter: sepia(1);
+        -moz-filter: sepia(1);
+        filter: sepia(1);*/
+}
+
+#card h2 {
+    font-family: courier;
+    color: #333;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 15pt;
+}
+
+#card p {
+    font-family: courier;
+    color: #555;
+    font-size: 13px;
+}
+
+#card span {
+    font-family: courier;
+}
+
+
+/* profile */
+
+.profile__content {
+    /* margin-top: -38rem; */
+    width: 30%;
+    color: white;
+    /* margin-top: 120px; */
+    padding-top: 120px;
+    -webkit-box-shadow: 0px 0px 16px 2px rgba(112, 112, 112, 1);
+    -moz-box-shadow: 0px 0px 16px 2px rgba(112, 112, 112, 1);
+    box-shadow: 0px 0px 16px 2px rgba(112, 112, 112, 1);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.color-text {
+    color: #ed7532;
+    font-size: 16px;
+}
+
+.history__content {
+    height: 500px;
+    width: 65%;
+}
+
+.history__content tbody.ant-table-tbody {
+    background-color: #ffffff;
+}
+
+.modal__list__ticket .ant-modal-body {
+    padding: 0!important;
+}
+
+.modal__list__ticket .ant-table-small>.ant-table-content>.ant-table-body {
+    margin: 0;
+}
+
+.modal__list__ticket thead.ant-table-thead {
+    background-color: orange;
+}
+
+.modal__list__ticket .ant-table-small {
+    border: unset;
+    border-radius: 0px;
+}
+
+
+/* end profile */
+
+
+/* arrow in movie detail */
+
+.ant-tabs-tab-prev.ant-tabs-tab-arrow-show,
+.ant-tabs-tab-next.ant-tabs-tab-arrow-show {
+    color: #abb7c4;
+}
+
+:root .ant-tabs-tab-prev-icon-target,
+ :root .ant-tabs-tab-next-icon-target {
+    font-size: 17px;
+}
+
+
+/* end arrow */
+
+
+/* movie detail */
+
+.spinner__movie__detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #000000; */
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Loading */
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis-color {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis-color div {
+    position: absolute;
+    top: 33px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ed7532;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1),
+.lds-ellipsis-color div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2),
+.lds-ellipsis-color div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3),
+.lds-ellipsis-color div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4),
+.lds-ellipsis-color div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+
+/* End loading */
+
+button:focus {
+    outline: unset;
+}
+
+
+/* Showtimes list */
+
+.theater__infor {
+    font-size: 16px;
+}
+
+
+/* End showtimes */
